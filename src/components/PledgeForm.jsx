@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import apiCall from '../utils/api';
-import { useAuth } from '../hooks/use-auth.js';
 import './PledgeForm.css';
 
 function PledgeForm({ fundraiserId, onSuccess }) {
@@ -11,7 +10,6 @@ function PledgeForm({ fundraiserId, onSuccess }) {
     });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const { auth } = useAuth();
 
     const handleChange = (e) => {
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -27,14 +25,13 @@ function PledgeForm({ fundraiserId, onSuccess }) {
         setLoading(true);
 
         try {
-            // TODO: Replace with actual API call once backend is deployed
+            // Backend automatically sets supporter from authenticated user
             await apiCall('/pledges/', {
                 method: 'POST',
                 body: JSON.stringify({
                     ...formData,
                     amount: parseFloat(formData.amount),
-                    fundraiser: fundraiserId,
-                    supporter: parseInt(auth.user_id)
+                    fundraiser: fundraiserId
                 })
             });
 
