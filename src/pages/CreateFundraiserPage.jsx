@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/use-auth.js';
 import apiCall from '../utils/api';
@@ -17,10 +17,12 @@ function CreateFundraiserPage() {
     const { auth } = useAuth();
     const navigate = useNavigate();
 
-    if (!auth.token) {
-        navigate('/login');
-        return null;
-    }
+    // Check authentication with useEffect instead of in render
+    useEffect(() => {
+        if (!auth.token) {
+            navigate('/login');
+        }
+    }, [auth.token, navigate]);
 
     const handleChange = (e) => {
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;

@@ -34,8 +34,12 @@ function LoginPage() {
             });
 
             window.localStorage.setItem('token', data.token);
+            window.localStorage.setItem('user_id', data.user_id);
+            window.localStorage.setItem('email', data.email);
             setAuth({
                 token: data.token,
+                user_id: data.user_id,
+                email: data.email,
             });
             navigate('/');
         } catch (err) {

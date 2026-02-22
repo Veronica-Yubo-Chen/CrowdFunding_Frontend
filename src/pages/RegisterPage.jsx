@@ -55,8 +55,12 @@ function RegisterPage() {
             });
 
             window.localStorage.setItem('token', loginData.token);
+            window.localStorage.setItem('user_id', loginData.user_id);
+            window.localStorage.setItem('email', loginData.email);
             setAuth({
                 token: loginData.token,
+                user_id: loginData.user_id,
+                email: loginData.email,
             });
             navigate('/');
         } catch (err) {

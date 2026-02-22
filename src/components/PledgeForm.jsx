@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import apiCall from '../utils/api';
+import { useAuth } from '../hooks/use-auth.js';
 import './PledgeForm.css';
 
 function PledgeForm({ fundraiserId, onSuccess }) {
@@ -10,6 +11,7 @@ function PledgeForm({ fundraiserId, onSuccess }) {
     });
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const { auth } = useAuth();
 
     const handleChange = (e) => {
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -31,7 +33,8 @@ function PledgeForm({ fundraiserId, onSuccess }) {
                 body: JSON.stringify({
                     ...formData,
                     amount: parseFloat(formData.amount),
-                    fundraiser: fundraiserId
+                    fundraiser: fundraiserId,
+                    supporter: parseInt(auth.user_id)
                 })
             });
 
