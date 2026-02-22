@@ -1,5 +1,5 @@
-// TODO: Update this URL once backend is deployed to Heroku
-const API_URL = 'http://localhost:8000/api';
+// Backend API URL - uses environment variable or defaults to localhost
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 export const getAuthToken = () => {
     return localStorage.getItem('token');
