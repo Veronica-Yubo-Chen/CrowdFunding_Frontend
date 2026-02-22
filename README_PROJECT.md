@@ -227,7 +227,7 @@ This project is created as part of a coding bootcamp project.
 
 ## Acknowledgments
 
-- She Codes Plus Python bootcamp
+- She Codes Plus
 - React documentation
 - Vite documentation
 - React Router documentation
