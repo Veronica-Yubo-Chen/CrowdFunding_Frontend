@@ -1,0 +1,221 @@
+.fundraiser-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fundraiser-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.fundraiser-detail h1 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.fundraiser-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.fundraiser-description {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.progress-section {
+    margin: 2rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.status.open {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status.closed {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.owner-actions {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.owner-actions button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.owner-actions button:first-child {
+    background-color: #2196F3;
+    color: white;
+}
+
+.owner-actions button:first-child:hover {
+    background-color: #1976D2;
+}
+
+.owner-actions .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.owner-actions .delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.pledge-section {
+    margin: 2rem 0;
+}
+
+.pledge-section > button {
+    padding: 0.75rem 2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.pledge-section > button:hover {
+    background-color: #45a049;
+}
+
+.pledges-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.pledges-section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.pledges-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pledge-item {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.pledge-info {
+    margin-bottom: 0.5rem;
+}
+
+.pledge-info strong {
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.pledge-comment {
+    color: #666;
+    font-style: italic;
+    margin: 0.5rem 0 0 0;
+}
+
+.edit-form {
+    margin-top: 2rem;
+}
+
+.edit-form h2 {
+    margin-bottom: 1.5rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-group button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button-group button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-group button[type="button"] {
+    background-color: #757575;
+    color: white;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .fundraiser-detail {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .owner-actions {
+        flex-direction: column;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
