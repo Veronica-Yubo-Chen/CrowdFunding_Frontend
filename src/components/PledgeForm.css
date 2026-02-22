@@ -35,7 +35,8 @@
 .pledge-form input:focus,
 .pledge-form textarea:focus {
     outline: none;
-    border-color: #4CAF50;
+    border-color: #9b59b6;
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.1);
 }
 
 .checkbox-label {
@@ -52,17 +53,19 @@
 .pledge-form button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #9b59b6 0%, #c44569 100%);
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
     transition: background-color 0.3s;
 }
 
 .pledge-form button:hover:not(:disabled) {
-    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
 }
 
 .pledge-form button:disabled {

@@ -69,7 +69,10 @@ function RegisterPage() {
     return (
         <div className="auth-container">
             <div className="auth-form">
-                <h2>Register</h2>
+                <h2>💫 Join Glwup</h2>
+                <p style={{ textAlign: 'center', color: '#666', marginBottom: '1.5rem', fontSize: '0.95rem', margin: '0 0 1.5rem 0' }}>
+                    Create your account to start crowdfunding
+                </p>
                 {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -117,7 +120,7 @@ function RegisterPage() {
                         />
                     </div>
                     <button type="submit" disabled={loading}>
-                        {loading ? 'Registering...' : 'Register'}
+                        {loading ? 'Creating account...' : '✨ Create Account'}
                     </button>
                 </form>
                 <p className="auth-link">

@@ -47,7 +47,7 @@
 
 .progress-fill {
     height: 100%;
-    background-color: #4CAF50;
+    background: linear-gradient(90deg, #9b59b6 0%, #c44569 100%);
     transition: width 0.3s ease;
 }
 
@@ -66,8 +66,8 @@
 }
 
 .status.open {
-    background-color: #e8f5e9;
-    color: #2e7d32;
+    background-color: #f3e5f5;
+    color: #6a1b9a;
 }
 
 .status.closed {
@@ -87,16 +87,17 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .owner-actions button:first-child {
-    background-color: #2196F3;
+    background: linear-gradient(135deg, #9b59b6 0%, #c44569 100%);
     color: white;
 }
 
 .owner-actions button:first-child:hover {
-    background-color: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
 }
 
 .owner-actions .delete-btn {
@@ -114,17 +115,18 @@
 
 .pledge-section > button {
     padding: 0.75rem 2rem;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #9b59b6 0%, #c44569 100%);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pledge-section > button:hover {
-    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
 }
 
 .pledges-section {
@@ -155,7 +157,7 @@
 }
 
 .pledge-info strong {
-    color: #4CAF50;
+    color: #9b59b6;
     font-size: 1.1rem;
 }
 
@@ -188,8 +190,14 @@
 }
 
 .button-group button[type="submit"] {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #9b59b6 0%, #c44569 100%);
     color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button-group button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
 }
 
 .button-group button[type="button"] {

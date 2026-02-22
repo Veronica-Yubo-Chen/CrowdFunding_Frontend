@@ -48,7 +48,10 @@ function LoginPage() {
     return (
         <div className="auth-container">
             <div className="auth-form">
-                <h2>Login</h2>
+                <h2>✨ Welcome Back</h2>
+                <p style={{ textAlign: 'center', color: '#666', marginBottom: '1.5rem', fontSize: '0.95rem', margin: '0 0 1.5rem 0' }}>
+                    Sign in to support beauty campaigns
+                </p>
                 {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -74,7 +77,7 @@ function LoginPage() {
                         />
                     </div>
                     <button type="submit" disabled={loading}>
-                        {loading ? 'Logging in...' : 'Login'}
+                        {loading ? 'Signing in...' : '🚀 Sign In'}
                     </button>
                 </form>
                 <p className="auth-link">
