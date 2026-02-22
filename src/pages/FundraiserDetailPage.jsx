@@ -1,43 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../hooks/use-auth.js';
+import useFundraiser from '../hooks/use-fundraiser';
 import apiCall from '../utils/api';
 import PledgeForm from '../components/PledgeForm';
 import './FundraiserDetailPage.css';
 
 function FundraiserDetailPage() {
     const { id } = useParams();
-    const [fundraiser, setFundraiser] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
+    const { fundraiser, isLoading, error } = useFundraiser(id);
     const [showPledgeForm, setShowPledgeForm] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [editData, setEditData] = useState({});
     const { auth, isAuthenticated } = useAuth();
     const navigate = useNavigate();
-
-    useEffect(() => {
-        fetchFundraiser();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [id]);
-
-    const fetchFundraiser = async () => {
-        try {
-            // TODO: Replace with actual API call once backend is deployed
-            const data = await apiCall(`/fundraisers/${id}/`);
-            setFundraiser(data);
-            setEditData({
-                title: data.title,
-                description: data.description,
-                goal: data.goal,
-                is_open: data.is_open
-            });
-        } catch (err) {
-            setError(err.message || 'Failed to load fundraiser');
-        } finally {
-            setLoading(false);
-        }
-    };
 
     const handleDelete = async () => {
         if (!window.confirm('Are you sure you want to delete this fundraiser?')) {
@@ -45,39 +21,34 @@ function FundraiserDetailPage() {
         }
 
         try {
-            // TODO: Replace with actual API call once backend is deployed
             await apiCall(`/fundraisers/${id}/`, { method: 'DELETE' });
             navigate('/');
         } catch (err) {
-            setError(err.message || 'Failed to delete fundraiser');
+            console.error(err.message || 'Failed to delete fundraiser');
         }
     };
 
     const handleUpdate = async (e) => {
         e.preventDefault();
         try {
-            // TODO: Replace with actual API call once backend is deployed
-            const data = await apiCall(`/fundraisers/${id}/`, {
+            await apiCall(`/fundraisers/${id}/`, {
                 method: 'PUT',
                 body: JSON.stringify(editData)
             });
-            setFundraiser(data);
             setIsEditing(false);
         } catch (err) {
-            setError(err.message || 'Failed to update fundraiser');
+            console.error(err.message || 'Failed to update fundraiser');
         }
     };
 
     const handlePledgeSuccess = () => {
         setShowPledgeForm(false);
-        fetchFundraiser(); // Refresh to show new pledge
+        // The fundraiser data will be refreshed automatically by the hook
     };
 
-    if (loading) return <div className="loading">Loading...</div>;
-    if (error) return <div className="error-message">{error}</div>;
+    if (isLoading) return <div className="loading">Loading...</div>;
+    if (error) return <div className="error-message">{error.message}</div>;
     if (!fundraiser) return <div className="error-message">Fundraiser not found</div>;
-
-    // TODO: Once backend returns user info with token, compare auth.user.id with fundraiser.owner
     const isOwner = false; // Will need user data from backend to determine ownership
     const totalPledged = fundraiser.pledges?.reduce((sum, pledge) => sum + pledge.amount, 0) || 0;
     const progressPercentage = (totalPledged / fundraiser.goal) * 100;
