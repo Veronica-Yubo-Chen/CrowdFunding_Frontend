@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #9b59b6 0%, #c44569 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -43,12 +43,13 @@
 
 .nav-links .register-btn {
     background-color: white;
-    color: #4CAF50;
+    color: #9b59b6;
     font-weight: 600;
 }
 
 .nav-links .register-btn:hover {
     background-color: #f0f0f0;
+    color: #c44569;
 }
 
 .nav-links .logout-btn {

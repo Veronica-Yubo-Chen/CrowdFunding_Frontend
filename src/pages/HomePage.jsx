@@ -12,15 +12,21 @@ function HomePage() {
     return (
         <div className="home-page">
             <div className="hero-section">
-                <h1>Welcome to FundRaizr</h1>
-                <p>Support amazing projects and make dreams come true</p>
+                <h1>✨ Glwup ✨</h1>
+                <p>Vote with your wallet on beauty product reviews you want to see</p>
+                <p style={{ fontSize: '1rem', opacity: 0.9, marginBottom: '2rem', fontStyle: 'italic' }}>
+                    Support creators. Discover honest reviews. Get your glow up.
+                </p>
                 <Link to="/create-fundraiser" className="cta-button">
-                    Start a Fundraiser
+                    Start a Campaign
                 </Link>
             </div>
 
             <div className="fundraisers-section">
-                <h2>Active Fundraisers</h2>
+                <h2>🌟 Product Review Campaigns</h2>
+                <p style={{ textAlign: 'center', color: '#666', marginBottom: '2rem' }}>
+                    Discover campaigns from beauty creators reviewing your favorite products
+                </p>
                 {fundraisers.length > 0 ? (
                     <div id="fundraiser-list">
                         {fundraisers.map((fundraiserData) => (
@@ -28,7 +34,7 @@ function HomePage() {
                         ))}
                     </div>
                 ) : (
-                    <p className="empty-state">No fundraisers yet. Be the first to create one!</p>
+                    <p className="empty-state">No campaigns yet. Be the first beauty creator to start one!</p>
                 )}
             </div>
         </div>

@@ -25,12 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #4CAF50;
+    color: #9b59b6;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #45a049;
+    color: #c44569;
 }
 
 button {

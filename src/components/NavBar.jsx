@@ -15,7 +15,7 @@ function NavBar() {
             <nav className="navbar">
                 <div className="nav-container">
                     <div className="nav-brand">
-                        <Link to="/">FundRaizr</Link>
+                        <Link to="/">✨ Glwup</Link>
                     </div>
                     <div className="nav-links">
                         <Link to="/">Home</Link>

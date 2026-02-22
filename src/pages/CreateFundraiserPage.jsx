@@ -56,32 +56,37 @@ function CreateFundraiserPage() {
     return (
         <div className="auth-container">
             <div className="auth-form" style={{ maxWidth: '600px' }}>
-                <h2>Create New Fundraiser</h2>
+                <h2>🌟 Launch Your Beauty Campaign</h2>
+                <p style={{ textAlign: 'center', color: '#666', marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+                    Share your product review vision and let the beauty community vote with their wallets
+                </p>
                 {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="title">Title:</label>
+                        <label htmlFor="title">Campaign Title:</label>
                         <input
                             type="text"
                             id="title"
                             name="title"
                             value={formData.title}
                             onChange={handleChange}
+                            placeholder="e.g., Best K-Beauty Moisturizers Comparison"
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="description">Description:</label>
+                        <label htmlFor="description">Campaign Details:</label>
                         <textarea
                             id="description"
                             name="description"
                             value={formData.description}
                             onChange={handleChange}
+                            placeholder="Describe what products you'll review and why..."
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="goal">Goal Amount ($):</label>
+                        <label htmlFor="goal">Funding Goal ($):</label>
                         <input
                             type="number"
                             id="goal"
@@ -90,18 +95,19 @@ function CreateFundraiserPage() {
                             step="0.01"
                             value={formData.goal}
                             onChange={handleChange}
+                            placeholder="How much do you need?"
                             required
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="image">Image URL:</label>
+                        <label htmlFor="image">Campaign Image URL:</label>
                         <input
                             type="url"
                             id="image"
                             name="image"
                             value={formData.image}
                             onChange={handleChange}
-                            placeholder="https://example.com/image.jpg"
+                            placeholder="https://example.com/campaign-image.jpg"
                         />
                     </div>
                     <div className="form-group">
@@ -113,11 +119,11 @@ function CreateFundraiserPage() {
                                 onChange={handleChange}
                                 style={{ width: 'auto', marginRight: '0.5rem' }}
                             />
-                            Open for pledges
+                            Open campaign for pledges
                         </label>
                     </div>
                     <button type="submit" disabled={loading}>
-                        {loading ? 'Creating...' : 'Create Fundraiser'}
+                        {loading ? 'Launching...' : '✨ Launch Campaign'}
                     </button>
                 </form>
             </div>
