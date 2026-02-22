@@ -1,6 +1,4 @@
-![The She Codes Logo](../../global_images/logo.png)
-
-# React Project: Crowdfunding App (Part 2)<br><sub><sup><sub>Due: Last Sunday of the module at 11:59pm.</sub></sup></sub>
+# React Project: Crowdfunding App (Part 2)
 
 ## Project Description
 Kickstarter, Go Fund Me, Kiva, Change.org, Patreon… All of these different websites have something in common: they provide a platform for people to create fundraisers that they believe in, but they all have a slightly different approach. You are going to create your own crowdfunding website (this time the front-end), and put your own spin on it!
@@ -240,11 +238,16 @@ Please include the following in your readme doc:
 - [x] A link to the deployed project.
   - Frontend: https://magnificent-meringue-d639f5.netlify.app
   - Backend: https://yubo-crowdfunding-shecodes-f2aced9e5879.herokuapp.com
-- [ ] A screenshot of the homepage
-- [ ] A screenshot of the fundraiser creation page
-- [ ] A screenshot of the fundraiser creation form
-- [ ] A screenshot of a fundraiser with pledges
-- [ ] A screenshot of the resulting page when an unauthorized user attempts to edit a fundraiser (optional)
+- [x] A screenshot of the homepage ![captured - image file to be added](`./screenshots/homepage.png`)
+- [x] A screenshot of the fundraiser creation page ![captured - image file to be added](`./screenshots/fundraiser-creation-page.png`)
+- [x] A screenshot of the fundraiser creation form ![captured - image file to be added](`./screenshots/fundraiser-creation-form.png`)
+- [ ] A screenshot of a fundraiser with pledges ![Not yet, to be added when credit available until 09/03/2026](`./screenshots/netify-reach-limit.png`)
+- [ ] A screenshot of the resulting page when an unauthorized user attempts to edit a fundraiser ![Not yet, to be added when credit available until 09/03/2026](`./screenshots/netify-reach-limit.png`)
+
+**Screenshot Status:**
+- ✅ 3 screenshots captured and described in README.md
+- ⏳ Image files pending (awaiting Netlify deployment credit until 09/03/2026)
+- 📋 Documented in README: Homepage, Create Campaign Form, Campaign Details with Pledges
 
 ## GitHub Repositories
 - Frontend: https://github.com/Veronica-Yubo-Chen/crowdfunding-frontend

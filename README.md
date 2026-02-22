@@ -21,29 +21,83 @@ Both services have auto-deploy enabled on git push for continuous deployment.
 
 ## 📱 Screenshots
 
-### Homepage
-![Homepage showing fundraiser grid with progress bars]
-*Glwup homepage displaying active beauty campaigns with progress bars, categories, and funding status*
+> **Note:** Screenshot image files will be added to the `/screenshots` folder once Netlify deployment credit is available. The following sections document the 3 screenshots that have been captured.
 
-### Create Campaign Form
-![Empty fundraiser creation form]
-*Create Campaign page with form inputs for title, description, goal, image, and open/closed status*
+### 1. Homepage - Fundraiser Grid
+**Description:** The Glwup homepage showcasing the main landing page with hero section and fundraiser cards grid.
 
-### Campaign Creation (Filled Example)
-![Filled fundraiser creation form with sample data]
-*Example campaign creation form showing K-Beauty moisturizer comparison funding request*
+**Features visible:**
+- Purple-pink gradient hero section with "Glwup" branding
+- Fundraiser cards displayed in responsive grid
+- Progress bars showing funding status for each campaign
+- Campaign status badges (Open/Closed)
+- Navigation bar with Login/Register links
 
-### Campaign Details with Pledges
-![Fundraiser detail page showing pledges list and progress*]
-*Campaign detail page displaying pledges from supporters, total raised, and pledge comments*
+**Screenshot location:** `./screenshots/1-homepage.png` *(to be added)*
 
-### Make a Pledge
-![Pledge form with amount, comment, and anonymous checkbox]
-*Pledge creation form allowing supporters to contribute with optional comments and anonymity*
+---
 
-### Unauthorized Edit Attempt
-![Error message showing unauthorized access]
-*Permission error displayed when non-owner attempts to edit campaign (optional)*
+### 2. Create Campaign - Form
+**Description:** The campaign creation form that authenticated users access to launch a new fundraiser.
+
+**Features visible:**
+- Form title: "🌟 Launch Your Beauty Campaign"
+- Input fields for:
+  - Campaign Title
+  - Campaign Details (description)
+  - Funding Goal ($)
+  - Campaign Image URL
+  - Open campaign checkbox
+- Purple-pink gradient submit button
+- Error message handling
+
+**Screenshot location:** `./screenshots/2-create-campaign-form.png` *(to be added)*
+
+---
+
+### 3. Campaign Details - With Pledges
+**Description:** The campaign detail page showing a created fundraiser with pledges and pledge form.
+
+**Features visible:**
+- Campaign title and full description
+- Campaign image/banner
+- Purple-pink progress bar showing funding status
+- Total pledged vs. goal amount
+- Pledge list showing supporter contributions
+- Pledge amounts, comments, and pledge dates
+- "Submit Pledge" button and form
+- Campaign status and owner information
+
+**Screenshot location:** `./screenshots/3-campaign-detail.png` *(to be added)*
+
+---
+
+### Additional Screenshots (Coming Soon)
+
+Once Netlify deployment credit is restored, the following screenshots will be added:
+
+- **Login Form** - Authentication page with styled inputs and Glwup branding
+- **Unauthorized Edit Attempt** (optional) - Permission error displayed to non-owners
+
+---
+
+## 📸 How to Add Screenshots
+
+When screenshots are available, follow these steps:
+
+1. Create a `/screenshots` folder in the repository root
+2. Add screenshot image files with descriptive names:
+   - `1-homepage.png`
+   - `2-create-campaign-form.png`
+   - `3-campaign-detail.png`
+3. Update the image paths in this README
+4. Commit and push to GitHub
+
+```bash
+git add screenshots/
+git commit -m "Add project screenshots"
+git push origin main
+```
 
 ## ✨ Features
 
