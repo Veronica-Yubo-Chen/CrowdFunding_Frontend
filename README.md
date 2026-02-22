@@ -239,8 +239,8 @@ Please include the following in your readme doc:
   - Frontend: https://magnificent-meringue-d639f5.netlify.app
   - Backend: https://yubo-crowdfunding-shecodes-f2aced9e5879.herokuapp.com
 - [x] A screenshot of the homepage ![captured - image file to be added](`./screenshots/homepage.png`)
-- [x] A screenshot of the fundraiser creation page ![captured - image file to be added](`./screenshots/fundraiser-creation-page.png`)
-- [x] A screenshot of the fundraiser creation form ![captured - image file to be added](`./screenshots/fundraiser-creation-form.png`)
+- [x] A screenshot of the fundraiser creation page ![captured - image file added](`./screenshots/fundraiser-creation-page.png`)
+- [x] A screenshot of the fundraiser creation form ![captured - image file added](`./screenshots/fundraiser-creation-form.png`)
 - [ ] A screenshot of a fundraiser with pledges ![Not yet, to be added when credit available until 09/03/2026](`./screenshots/netify-reach-limit.png`)
 - [ ] A screenshot of the resulting page when an unauthorized user attempts to edit a fundraiser ![Not yet, to be added when credit available until 09/03/2026](`./screenshots/netify-reach-limit.png`)
 
