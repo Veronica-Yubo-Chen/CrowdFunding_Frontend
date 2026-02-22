@@ -1,0 +1,176 @@
+.user-profile {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.profile-header {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.user-info p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.user-info strong {
+    color: #333;
+}
+
+.profile-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-section h2 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+}
+
+.fundraisers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.fundraiser-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.fundraiser-card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.fundraiser-card h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.fundraiser-card h3 a:hover {
+    color: #4CAF50;
+}
+
+.fundraiser-goal {
+    font-weight: 600;
+    color: #4CAF50;
+    margin: 0.5rem 0;
+}
+
+.fundraiser-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.fundraiser-status.open {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.fundraiser-status.closed {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.pledge-count {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.pledges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pledge-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.pledge-header {
+    margin-bottom: 0.5rem;
+}
+
+.pledge-header strong {
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.pledge-header a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.pledge-header a:hover {
+    text-decoration: underline;
+}
+
+.pledge-comment {
+    color: #666;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.pledge-date {
+    color: #999;
+    font-size: 0.85rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.empty-state a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.empty-state a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .user-profile {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .profile-header,
+    .profile-section {
+        padding: 1.5rem;
+    }
+
+    .fundraisers-grid {
+        grid-template-columns: 1fr;
+    }
+}
